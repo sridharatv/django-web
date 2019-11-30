@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "relurl/base_template.html" %}
+{% load oem_conv %}
+{% block base_template %}
+    <h1>List of devices</h1>
+    {% csrf_token %}
+    {% if device_list %}
+        <table>
+            <thead align="center">
+            <th>Name</th>
+            <th>FW Version</th>
+            <th>Serial #</th>
+            <th>Vendor</th>
+            </thead>
+        {% for dev in device_list %}
+            <tr>
+                <td>{{ dev.name }}</td>
+                <td>{{ dev.fw_version }}</td>
+                <td>{{ dev.serial|upper }}</td>
+                <td>{{ dev.vendor|oem:'Motorola' }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock%}
+

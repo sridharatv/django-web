@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relative URL page</title>
+    <link rel="stylesheet" href="{% static "relurl/css/style_rel.css" %}"/>
+</head>
+<body>
+    <h1>Relative URL page</h1>
+    <a href="{% url 'relurl:index' %}">Goto Rel Home</a>
+    <a href="{% url 'index' %}">Back to Home</a>
+    <a href="{% url 'admin:index' %}">Goto Admin Page</a>
+</body>
+</html>
