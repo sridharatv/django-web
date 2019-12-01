@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Django</title>
+</head>
+<body>
+    <h2>{{get_image}}</h2>
+    <img src="{% static "myapp1/images/python-django.png" %}"
+            alt="Unable to open image" >
+</body>
+</html>

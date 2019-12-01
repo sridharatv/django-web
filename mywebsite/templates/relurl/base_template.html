@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "myapp1/css/style.css" %}"/>
+</head>
+
+<body id="bg" style="background-image: url('{% static "relurl/images/bg04.jfif   " %}')";>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="{%url 'index' %}">HOME</a> </li>
+                <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a> </li>
+                <li><a class="navbar-link" href="{% url 'relurl:image' %}">Image</a> </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block base_template %}
+
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>Copyright(C). All rights reserved 2019</p>
+    </footer>
+</body>
+
+</html>
