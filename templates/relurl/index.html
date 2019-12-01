@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relative Url Path</title>
+    <link rel="stylesheet" href="{% static "relurl/css/style_rel.css" %}"/>
+</head>
+<body>
+    <h1>Relative url paths. HOME PAGE</h1>
+    <a href="{% url 'relurl:image' %}">Click here for image</a>
+</body>
+</html>

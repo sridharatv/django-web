@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "relurl/base_template.html" %}
+{% load staticfiles %}
+{% block base_template %}
+<h1>Loading an image</h1>
+    <div class="container">
+        <a href="{% url 'relurl:relative' %}">Click here for relative</a>
+        <a href="{% url 'index' %}">Back to Home</a>
+        <img id="img_style" " src="{% static "myapp1/images/python-django.png" %}"
+                alt="Unable to open image"  >
+    </div>
+{% endblock %}
