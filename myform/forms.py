@@ -1,6 +1,6 @@
 from django import forms
 from django.core import validators
-from profanity_check import predict, predict_prob
+#from profanity_check import predict, predict_prob
 from .models import User
 
 class NewUserForm (forms.ModelForm):

@@ -1,12 +1,15 @@
 from django import forms
 from django.core import validators
-from profanity_check import predict, predict_prob
+#from profanity_check import predict, predict_prob
 
 def text_validator(value):
+    pass
+"""
     if predict([value]):
         raise forms.ValidationError("Got a bad word")
     if predict_prob([value]) > 0.4:
         raise forms.ValidationError("Got a probable bad word")
+"""
 
 
 class FormName(forms.Form):
