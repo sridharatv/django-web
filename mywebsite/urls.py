@@ -30,3 +30,4 @@ urlpatterns = [
     url(r'^cbvs/', include('cbvs.urls')),
     path('admin/', admin.site.urls),
 ]
+
