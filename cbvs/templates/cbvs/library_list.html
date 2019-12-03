@@ -1,0 +1,12 @@
+{% extends "cbvs/cbvs_base.html"%}
+
+{% block body_block %}
+<div class="jumbotron">
+    <h1>List of Libraries</h1>
+    <ol>
+        {% for library in libraries %}
+        <h3><li><a href="{{library.id}}">{{ library.name }}</a> </li></h3>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}

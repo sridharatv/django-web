@@ -1,0 +1,17 @@
+{% extends "cbvs/cbvs_base.html"%}
+
+{% block body_block %}
+<div class="jumbotron">
+    <h1>Details of a Library</h1>
+    <p>Name: {{library_detail.name}} </p>
+    <p>Location: {{library_detail.location}} </p>
+    <h3>Books:</h3>
+    {% for book in library_detail.books.all %}
+        <ol>
+            <li>{{book.title}} By {{book.author}}</li>
+        </ol>
+    {% endfor %}
+    <p></p>
+    <input type="button" value="Back" class="btn btn-primary" onClick="javascript:history.go(-1)">
+</div>
+{% endblock %}

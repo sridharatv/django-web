@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'myform',
     'relurl',
     'login',
+    'cbvs',
 ]
 
 MIDDLEWARE = [

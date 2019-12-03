@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^register/', include ('myform.urls')),
     url(r'^relurl/', include('relurl.urls')),
     url(r'^login/', include('login.urls')),
+    url(r'^cbvs/', include('cbvs.urls')),
     path('admin/', admin.site.urls),
 ]
