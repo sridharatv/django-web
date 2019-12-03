@@ -40,3 +40,4 @@ class LibraryDetailView(DeleteView):
     context_object_name = 'library_detail'
     model = models.Library
     template_name = 'cbvs/library_detail.html'
+

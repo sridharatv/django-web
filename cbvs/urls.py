@@ -9,3 +9,4 @@ urlpatterns = [
     url(r'^list/$', views.LibraryListView.as_view(), name='list'),
     url(r'^(?P<pk>[-\w]+)/$', views.LibraryDetailView.as_view(), name='detail'),
 ]
+
