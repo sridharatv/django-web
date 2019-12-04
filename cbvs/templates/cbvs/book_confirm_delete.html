@@ -1,0 +1,11 @@
+{% extends "cbvs/cbvs_base.html"%}
+{% block body_block %}
+
+<h1>Delete {{library.name}}?</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-danger" value="Delete">
+    <a class="btn btn-primary" href="{% url 'cbvs:book_detail' pk=book.pk %}">Cancel</a>
+</form>
+
+{% endblock %}

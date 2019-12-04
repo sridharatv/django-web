@@ -3,11 +3,11 @@
 {% block body_block %}
 <div class="jumbotron">
     <h1>List of Libraries</h1>
+    <h3>Select the Library to view details</h3>
     <ol>
         {% for library in libraries %}
         <h3><li><a href="{{library.id}}">{{ library.name }}</a> </li></h3>
         {% endfor %}
     </ol>
-    <h3>Select the Library to view details</h3>
 </div>
 {% endblock %}

@@ -1,7 +1,9 @@
-{% extends "cbvs/base.html"%}
+{% extends "cbvs/cbvs_base.html"%}
 {% block body_block %}
 <div class="jumbotron">
-    <h1>Class based Views Using Templates</h1>
+    <h1>Class based Views Using Templates </h1>
     <h3>{{ add_item }}</h3>
+    <a class="btn btn-primary" href="{% url 'cbvs:list' %}">Libraries</a>
+    <a class="btn btn-primary" href="{% url 'cbvs:book_list'  %}">Books</a>
 </div>
 {% endblock %}

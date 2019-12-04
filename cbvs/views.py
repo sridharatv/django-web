@@ -21,12 +21,12 @@ class CBVSViw(View):
         return HttpResponse("<h1>This is from Class based Views</h1>")
 
 
-class CBVSTemplteView(TemplateView):
+class CBVSTemplateView(TemplateView):
     template_name = 'cbvs/index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['add_item'] = 'Some Text Added from COntext'
+        context['add_item'] = 'Select Books or Libraries'
         return context
 
 class LibraryListView(ListView):

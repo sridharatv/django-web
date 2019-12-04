@@ -1,0 +1,17 @@
+{% extends "cbvs/cbvs_base.html"%}
+{% block body_block %}
+
+<h1>
+    {% if not form.instance.pk %}
+    Create Book
+    {% else %}
+    Update Book
+    {% endif %}
+</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btm btn-primary" value="Submit">
+</form>
+{% endblock %}
