@@ -52,6 +52,6 @@ class LibraryUpdateView(UpdateView):
 
 class LibraryDeleteView(DeleteView):
     model = models.Library
-    success_url = reverse_lazy("cbvs:index")
+    success_url = reverse_lazy("cbvs:list")
 
 
