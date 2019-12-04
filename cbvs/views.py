@@ -6,6 +6,7 @@ from django.views.generic import (View,
                                   UpdateView,
                                   DeleteView)
 from django.http import HttpResponse
+from django.urls import reverse, reverse_lazy
 from . import models
 
 # Create your views here.
@@ -40,4 +41,17 @@ class LibraryDetailView(DeleteView):
     context_object_name = 'library_detail'
     model = models.Library
     template_name = 'cbvs/library_detail.html'
+
+class LibraryCreateView(CreateView):
+    model = models.Library
+    fields = ('name', 'books', 'location')
+
+class LibraryUpdateView(UpdateView):
+    model = models.Library
+    fields = ('name','books')
+
+class LibraryDeleteView(DeleteView):
+    model = models.Library
+    success_url = reverse_lazy("cbvs:index")
+
 

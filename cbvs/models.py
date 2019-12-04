@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -7,7 +8,7 @@ class Book(models.Model):
     author = models.CharField(max_length=128)
     publisher = models.CharField(max_length=128)
     year = models.PositiveIntegerField()
-    pages = models.PositiveIntegerField
+    pages = models.PositiveIntegerField()
 
     def __str__(self):
         return self.title
@@ -20,5 +21,5 @@ class Library (models.Model):
     def __str__(self):
         return self.name
 
-
-
+    def get_absolute_url(self):
+        return reverse("cbvs:detail", kwargs={'pk':self.pk})

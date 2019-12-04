@@ -5,7 +5,7 @@ import django
 from faker import Faker, Factory
 django.setup()
 
-from myapp1.models import Publisher, Author, Book
+from mywebsite.myapp1.models import Publisher, Author, Book
 
 fakegen = Faker()
 

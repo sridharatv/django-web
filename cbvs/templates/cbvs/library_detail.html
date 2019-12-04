@@ -6,12 +6,16 @@
     <p>Name: {{library_detail.name}} </p>
     <p>Location: {{library_detail.location}} </p>
     <h3>Books:</h3>
+    <ol>
     {% for book in library_detail.books.all %}
-        <ol>
             <li>{{book.title}} By {{book.author}}</li>
-        </ol>
     {% endfor %}
+    </ol>
     <p></p>
     <input type="button" value="Back" class="btn btn-primary" onClick="javascript:history.go(-1)">
+    <a class="btn btn-warning" href="{% url 'cbvs:update' pk=library_detail.pk %}">Update</a>
+    <a class="btn btn-danger" href="{% url 'cbvs:delete' pk=library_detail.pk %}">Delete</a>
+
 </div>
+
 {% endblock %}
