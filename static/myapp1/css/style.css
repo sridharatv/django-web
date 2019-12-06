@@ -23,8 +23,20 @@ h2 {
     background-attachment: fixed;
 }
 
+.bg-image{
+    margin: 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ff0080;
+}
+
+div {
+    background: url('relurl/images/bg04.jfif');
+    background-repeat: no-repeat;
+}
+
 body {
-    color:      black;
+    color: #234322;
     text-align: justify;
     text-justify: inter-word;
     font:       20px;
